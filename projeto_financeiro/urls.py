@@ -18,4 +18,14 @@ urlpatterns = [
         dashboard,
         name="dashboard"
     ),
+    
+    path(
+        "members/", 
+        include('django.contrib.auth.urls')
+    ),
+
+    path(
+        "members/", include('memebrs.urls')
+    ),
+
 ]
