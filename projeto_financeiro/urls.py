@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from ativos.views import index
 from ativos.views import dashboard
@@ -25,7 +25,7 @@ urlpatterns = [
     ),
 
     path(
-        "members/", include('memebrs.urls')
+        "members/", include('members.urls')
     ),
 
 ]
