@@ -3,4 +3,4 @@ from django.contrib.auth import authenticate, login , logout
 from django.contrib import messages
 
 def login_user(request):
-    return render(request, 'registration/login.html', {})
+    return render(request, "login_user.html")

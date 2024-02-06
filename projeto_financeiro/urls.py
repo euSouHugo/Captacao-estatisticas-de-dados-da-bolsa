@@ -3,12 +3,13 @@ from django.urls import path, include
 
 from ativos.views import index
 from ativos.views import dashboard
+from members.views import login_user 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path(
-        "",
+        "index/",
         index,
         name="index"
     ),
@@ -20,12 +21,11 @@ urlpatterns = [
     ),
     
     path(
-        "members/", 
-        include('django.contrib.auth.urls')
+        "",
+        login_user,
+        name="login_user"
     ),
 
-    path(
-        "members/", include('members.urls')
-    ),
+
 
 ]

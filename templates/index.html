@@ -155,7 +155,11 @@
         <input type="number" id="variacao" name="variacao" required>
 
         <input type="submit" value="Enviar">
-        <input type="submit" value="Identificação">
+    </form>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+    
+        <input type="submit" value="Identif.">
     </form>
 </div>
 
