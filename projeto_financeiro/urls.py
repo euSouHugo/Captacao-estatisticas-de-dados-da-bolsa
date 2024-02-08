@@ -3,7 +3,7 @@ from django.urls import path, include
 
 from ativos.views import index
 from ativos.views import dashboard
-from members.views import login_user 
+from members.views import login_user, create
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,11 @@ urlpatterns = [
         name="login_user"
     ),
 
+    path(
+        "create/",
+        create,
+        name="create"
+    ),
 
 
 ]
