@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
-from ativos.views import index
-from ativos.views import dashboard
+from ativos.views import index, dashboard
 from members.views import login_user, create
 
 urlpatterns = [

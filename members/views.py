@@ -1,14 +1,12 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login , logout
-from django.contrib import messages
 from members.forms import UsuarioForms
 
 def login_user(request):
     login = UsuarioForms()
-    return render(request, "login_user.html", {"login": login})
+    return render(request, "login_user.html", {"login_template": login})
 
 def create(request):
-    login= UsuarioForms(request.POST or None)    
+    login = UsuarioForms(request.POST or None)    
     if login.is_valid():
         login.save()
-        return redirect('index')
+        return redirect('index') #TODO: esse index redireciona para onde? para o path com name="index" na url?

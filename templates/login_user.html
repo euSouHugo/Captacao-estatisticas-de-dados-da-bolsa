@@ -140,7 +140,7 @@
      <h2>Opções de DayTrade</h2>
     
  
-     <form method="post" action="{% url 'create' %}" id="index" name="index" >
+     <form method="post" action="{% url 'create' %}" id="create" name="create" > 
      
          {% csrf_token %}
          <!-- <label for="login">Login:</label>  -->
@@ -151,7 +151,7 @@
          <!--  <input type="password" id="senha" name="senha" required> -->
           <!-- <input type="password" id={{form.senha}} name={{form.senha}} required>  -->
  
-        {{login}}
+        {{login_template}}  <!-- template em memebers.views.py -->
          
          <input type="submit" value="Entrar">
      </form>
