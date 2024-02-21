@@ -10,3 +10,9 @@ def create(request):
     if login.is_valid():
         login.save()
         return redirect('index') #TODO: esse index redireciona para onde? para o path com name="index" na url?
+    
+def history(request):
+    return render(request, 'history.html')
+
+def configuration(request):
+    return render(request, 'configuration.html')

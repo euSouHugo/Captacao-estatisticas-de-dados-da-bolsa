@@ -128,8 +128,8 @@
     <h2>Back-teste B3</h2>
     <ul>
         <li><a href="#"><i class="fas fa-search"></i> Filtro </a></li>
-        <li><a href="#"><i class="fas fa-history"></i> Histórico</a></li>
-        <li><a href="#"><i class="fas fa-cogs"></i> Configurações</a></li>
+        <li><a href="history/"><i class="fas fa-history"></i> Histórico[teste]</a></li>
+        <li><a href="configuration/"><i class="fas fa-cogs"></i>  Configz[teste]</a></li>
     </ul>
 </div>
 
@@ -155,6 +155,13 @@
         <input type="number" id="variacao" name="variacao" required>
 
         <input type="submit" value="Enviar">
+    
+    </form>
+
+    <form method = "post" action = "{% url 'login_user' %}">
+        {% csrf_token %}
+        <input type="submit" value="Voltar">
+
     </form>
 </div>
 
