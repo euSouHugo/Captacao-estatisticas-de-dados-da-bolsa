@@ -3,7 +3,8 @@ from django.urls import path
 
 from django.views.generic import RedirectView
 from ativos.views import index, dashboard
-from members.views import login_user, create, history, configuration
+from members.views import login_user, create, configuration, history
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

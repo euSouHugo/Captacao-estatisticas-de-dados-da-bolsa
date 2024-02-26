@@ -3,7 +3,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django import forms
 from ativos.utils import download_and_traform, filter_by_variation
-from ativos.models import Ativo
 
 class DashboardForm(forms.Form):
     volume = forms.DecimalField()
